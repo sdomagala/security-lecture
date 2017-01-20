@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h3>Posts</h3>
+    </div><!-- /col-sm-12 -->
+  </div><!-- /row -->
+  <div class="row">
+    {{#each helpers.posts}}
+      <div class="col-sm-1">
+        <div class="thumbnail">
+          <img class="img-responsive user-photo" src="/dependencies/avatar.png">
+        </div><!-- /thumbnail -->
+      </div><!-- /col-sm-1 -->
+
+      <div class="col-sm-5">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <strong>Someone</strong> <span class="text-muted">commented</span>
+          </div>
+          <div class="panel-body">
+            {{{this.content}}}
+          </div><!-- /panel-body -->
+        </div><!-- /panel panel-default -->
+      </div><!-- /col-sm-5 -->
+    {{/each}}
+  </div><!-- /row -->
+
+</div><!-- /container -->

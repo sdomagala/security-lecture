@@ -1,0 +1,244 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Web Development</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-background-image="lib/repeatable_pattern_background.jpg">
+          <section>
+            <img style="width:14%; border:none; background:transparent" src="lib/html5.png" />
+            <img style="width:10%; border:none; background:transparent" src="lib/css3.png" />
+            <img style="width:12%; border:none; background:transparent" src="lib/js-logo.png" />
+            <img style="width:15%; border:none; background:transparent" src="lib/reactjs.png" />
+            <img style="width:20%; border:none; background:transparent" src="lib/nodejs-512.png" />
+            <br/><br/><br/>
+            <h2>Web Development</h2>
+            <br/>
+            <p style="font-size:30px"><i><a>"From zero to web developer hero"</a></i></p>
+          </section>
+
+          <section>
+            <img style="width:60%; border:none; background:transparent" src="lib/sap-hybris-logo.png" /><br/><br/>
+            <center>
+              <h3>Hack Your Career</h3><br/>
+              <img style="width:8%; border:none; background:transparent" src="lib/square-facebook-512.png" /> <a style="color:#3b5998">Hack.your.Career</a>
+            </center>
+            <aside class="notes">
+              - Czym jest YaaS
+            </aside>
+          </section>
+
+          <section>
+            <h2>Agenda</h2>
+            <ul class="unordered-list">
+              <li><s>04.11 - A brief introduction to modern JavaScript</s></li><br/>
+              <li><s>18.11 - NodeJS for Dummies</s></li><br/>
+              <li><s>25.11 - ReactJS – creating immutable interfaces</s></li><br/>
+              <li><s>09.12 - UI Development 1/2</s></li><br/>
+              <li><s>13.01 - UI Development 2/2</s></li>
+              <li>20.01 - Security in Web Applications</li>
+            </ul>
+            <aside class="notes">
+              (Microservices, REST, Retrieving data from external sources)<br/>
+              (ReactJS, State management, Immutability)<br/>
+              (CSS/LESS/SASS, HTML5, RWD)
+            </aside>
+          </section>
+        </section>
+
+        <section data-background-image="lib/repeatable_pattern_background.jpg">
+          <section>
+            <div><i>Security - the elephant in the room.<br/> Everyone agrees that it is very important but few takes it seriously.</i> <br/><br/><div style="float: right"> #RisingStack</div> </div>
+            <div class="authors-footer" style="font-size:30px">
+              <p><b>Sebastian Domagała</b></p>
+            </div>
+            <aside class="notes">
+              Po co w ogóle ten wykład?
+            </aside>
+          </section>
+
+          <section>
+            <h3> What are we going to talk about today: </h3>
+            <ul>
+              <li class="fragment"> Security - what does it even mean? </li>
+              <li class="fragment"> Dawn in security </li>
+              <li class="fragment"> What you should worry about? </li>
+              <li class="fragment"> Look, your site went down </li>
+              <li class="fragment"> Let's look at the numbers </li>
+
+              <li class="fragment"> Q&A </li>
+            </ul>
+          </section>
+        </section>
+        <section data-background-image="lib/repeatable_pattern_background.jpg">
+          <section>
+            <h3> Security - what does it even mean?</h3>
+
+            <div class="fragment">
+              (...) digital equipment, information and services are protected from unintended or unauthorized access, change or destruction (...)
+              <br/><br/>
+              -Wikipedia
+            </div>
+            <br/><br/>
+            <div class="fragment">
+              ... and keeping your services up and running
+            </div>
+          </section>
+
+          <section>
+            <p> There are two types of developers. The ones that care about security, and the ones that are about to. </p>
+            <img class="fragment" src="lib/img/linkedin.png" />
+          </section>
+          <section>
+            <img src="lib/img/vines.png" />
+          </section>
+          <section>
+            <img src="lib/img/mongodb.png" />
+          </section>
+        </section>
+        <section data-background-image="lib/repeatable_pattern_background.jpg">
+          <section>
+            <h3> Dawn in security </h3>
+
+            <div class="fragment"> Why? </div>
+
+            <aside class="notes">
+              - Mirai botnet
+              - IoT
+            </aside>
+          </section>
+          <section>
+            <h3> Problems </h3>
+            <ul>
+              <li class="fragment"> Every industry is moving to web</li>
+              <li class="fragment"> Security advantages are not visible to client </li>
+              <li class="fragment"> You need to be one step ahead of attacker </li>
+              <li class="fragment"> You don't care about security </li>
+              <li class="fragment">$$$$ <br/><img src="lib/img/money.png" /></li>
+            </ul>
+          </section>
+      </section>
+        <section data-background-image="lib/repeatable_pattern_background.jpg">
+          <section>
+            <h2>What you should worry about?</h2>
+            <div> As a developer you can't make successful website by yourself! </div>
+            <aside class="notes">
+              ochrona z poziomu infrastruktury
+            </aside>
+          </section>
+          <section>
+            <h2>XSS Attack</h2>
+            <div>XSS enables attackers to inject client-side scripts into web pages viewed by other users.</div>
+            <aside class="notes">
+              - reflected vs stored
+              - dynamiczna podmiany zawartości strony www
+              - wykradanie cookies
+              - ddos
+            </aside>
+          </section>
+          <section>
+            <h2>Session hijacking attack</h2>
+            <div>The Session Hijacking attack consists of the exploitation of the web session control mechanism, which is normally managed for a session token.</div>
+            <aside class="notes"> </aside>
+          </section>
+          <section>
+            <h2>(No-)SQL Injection Attack</h2>
+            <div>Code injection technique, used to attack data-driven applications, in which nefarious SQL statements are inserted into an entry field for execution.</div>
+          </section>
+          <section>
+            <h2>DDoS</h2>
+            <div>Cyber-attack where the perpetrator seeks to make a machine or network resource unavailable to its intended users by temporarily or indefinitely disrupting services.</div>
+          </section>
+        </section>
+        <section data-background-image="lib/repeatable_pattern_background.jpg">
+          <section>
+            <h2>LIVE DEMO</h2>
+          </section>
+        </section>
+        <section data-background-image="lib/repeatable_pattern_background.jpg">
+          <section>
+            <h2>What about sessions?</h2>
+
+          </section>
+        </section>
+      <section data-background-image="lib/repeatable_pattern_background.jpg">
+        <section>
+          <h2>Some numbers...</h2>
+          <a class="fragment" href="https://www.symantec.com/content/dam/symantec/docs/infographics/istr-attackers-strike-large-business-en.pdf" target="_blank"> Phishing attacks in industries </a><br/>
+          <a class="fragment" href="https://www.symantec.com/content/dam/symantec/docs/infographics/istr-reporting-breaches-or-not-en.pdf" target="_blank"> Breaches of personal data </a><br/>
+          <a class="fragment" href="https://www.symantec.com/content/dam/symantec/docs/infographics/istr-zero-day-en.pdf" target="_blank"> Zero-Day vulnerabilities </a>
+
+        </section>
+      </section>
+      <section data-background-image="lib/repeatable_pattern_background.jpg">
+        <section>
+          <h2>What should I do to stay safe?</h2>
+          <ul>
+            <li class="fragment"> Don't use anything that is not production-ready</li>
+            <li class="fragment"> Stay up to date  - newsletters, twitter, white-hat websites </li>
+            <li class="fragment"> Be the attacker, what would you break knowing source code? </li>
+          </ul>
+        </section>
+        <section>
+          <h2> Some good read </h2>
+          <ul>
+            <li><a href="http://thehackernews.com/">The Hacker News</a></li>
+            <li><a href="https://sekurak.pl/">Sekurak</a></li>
+            <li><a href="https://niebezpiecznik.pl/">Niebezpiecznik</a></li>
+            <li><a href="https://niebezpiecznik.pl/tag/csi-stories/"> Historie Janusza </a></li>
+            <li><a href="https://google.com"> Google </a>
+          </ul>
+          <aside class="notes">
+          </aside>
+        </section>
+      </section>
+      <section data-background-image="lib/repeatable_pattern_background.jpg">
+        <section>
+          <img src="lib/img/thats-all-folks.png" />
+          <h2 class="fragment">Questions?</h2>
+        </section>
+      </section>
+      <section data-background-image="lib/repeatable_pattern_background.jpg">
+        <h2>Give us feedback!</h2>
+      </section>
+    </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        history: true,
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+  </body>
+</html>
