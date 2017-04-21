@@ -1,6 +1,6 @@
 # To run presentation
 
-Simply open index.html in root of project
+Simply open index.html in root of project or go to https://sdomagala.github.io/security-lecture/
 
 # To run both services
 
