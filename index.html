@@ -50,18 +50,22 @@
           <section>
             <h2>Agenda</h2>
             <ul class="unordered-list">
-              <li><s>04.11 - A brief introduction to modern JavaScript</s></li><br/>
-              <li><s>18.11 - NodeJS for Dummies</s></li><br/>
-              <li><s>25.11 - ReactJS – creating immutable interfaces</s></li><br/>
-              <li><s>09.12 - UI Development 1/2</s></li><br/>
-              <li><s>13.01 - UI Development 2/2</s></li>
-              <li>20.01 - Security in Web Applications</li>
+              <li>26.04 - Praktyczne zastosowania technologii Java</li><br/>
+              <li>12.05 - React Native - learn once, write anywhere.</li><br/>
+              <li>17.05 - DevOps - czyli jak przestać klikać i pokochać automatyzację. cz2</li><br/>
+              <li>... jak na razie</li>
             </ul>
-            <aside class="notes">
-              (Microservices, REST, Retrieving data from external sources)<br/>
-              (ReactJS, State management, Immutability)<br/>
-              (CSS/LESS/SASS, HTML5, RWD)
-            </aside>
+          </section>
+          <section>
+            <h3>Praktyczne zastosowania technologii Java</h3>
+            <ul>
+              <li class="fragment"> Kiedy? Semestr zimowy 2017/2018</li>
+              <li class="fragment">Dla kogo? Studenci VII semestru informatyki </li>
+              <li class="fragment">Czego możecie się nauczyć?</li>
+            </ul>
+            <div class="authors-footer" style="font-size:30px">
+              <p>Szczegóły dostępne tutaj: <a target="_blank" href="https://platforma.polsl.pl/rau2/course/view.php?id=839">https://platforma.polsl.pl/rau2/course/view.php?id=839</a></p>
+            </div>
           </section>
         </section>
 
@@ -73,6 +77,16 @@
             </div>
             <aside class="notes">
               Po co w ogóle ten wykład?
+            </aside>
+          </section>
+
+          <section>
+            <h3> But you are not security expert, why do you host this lecture? </h3>
+
+            <aside class="notes">
+              - chęć zainteresowania innych tym tematem
+              - jak zacząć
+              - czemu to dla mnie tak wazne
             </aside>
           </section>
 
@@ -100,7 +114,10 @@
             </div>
             <br/><br/>
             <div class="fragment">
-              ... and keeping your services up and running
+              Ommit those rules and your product will dissappear sooner than you think...
+            </div>
+            <div class="fragment">
+              ... or you will bankrupt
             </div>
           </section>
 
@@ -114,6 +131,17 @@
           <section>
             <img src="lib/img/mongodb.png" />
           </section>
+        </section>
+
+        <section data-background-image="lib/repeatable_pattern_background.jpg">
+          <h2> OWASP </h2>
+
+          <div class="fragment">
+            Online community which creates freely-available articles, methodologies, documentation, tools, and technologies in the field of web application security
+            <br/><br/>
+            -Wikipedia
+          </div>
+
         </section>
         <section data-background-image="lib/repeatable_pattern_background.jpg">
           <section>
@@ -130,56 +158,171 @@
             <h3> Problems </h3>
             <ul>
               <li class="fragment"> Every industry is moving to web</li>
-              <li class="fragment"> Security advantages are not visible to client </li>
+              <li class="fragment"> Security threats are not visible to client </li>
               <li class="fragment"> You need to be one step ahead of attacker </li>
               <li class="fragment"> You don't care about security </li>
               <li class="fragment">$$$$ <br/><img src="lib/img/money.png" /></li>
             </ul>
           </section>
       </section>
+
+
         <section data-background-image="lib/repeatable_pattern_background.jpg">
           <section>
             <h2>What you should worry about?</h2>
             <div> As a developer you can't make successful website by yourself! </div>
+            <p> (DDoS) </p>
             <aside class="notes">
               ochrona z poziomu infrastruktury
             </aside>
           </section>
-          <section>
-            <h2>XSS Attack</h2>
-            <div>XSS enables attackers to inject client-side scripts into web pages viewed by other users.</div>
-            <aside class="notes">
-              - reflected vs stored
-              - dynamiczna podmiany zawartości strony www
-              - wykradanie cookies
-              - ddos
-            </aside>
-          </section>
-          <section>
-            <h2>Session hijacking attack</h2>
-            <div>The Session Hijacking attack consists of the exploitation of the web session control mechanism, which is normally managed for a session token.</div>
-            <aside class="notes"> </aside>
-          </section>
-          <section>
-            <h2>(No-)SQL Injection Attack</h2>
-            <div>Code injection technique, used to attack data-driven applications, in which nefarious SQL statements are inserted into an entry field for execution.</div>
-          </section>
-          <section>
-            <h2>DDoS</h2>
-            <div>Cyber-attack where the perpetrator seeks to make a machine or network resource unavailable to its intended users by temporarily or indefinitely disrupting services.</div>
-          </section>
         </section>
+
         <section data-background-image="lib/repeatable_pattern_background.jpg">
+          <h2> OK, let's be specific!</h2>
+        </section>
+
+
+        <section data-background-image="lib/repeatable_pattern_background.jpg">
+          <section>
+            <h2>Injections</h2>
+            <div>SQL, No-SQL, Code, OS, XML, XPath etc.</div>
+            <img src="lib/img/exploits_of_a_mom.png" >
+          </section>
+          <section>
+            <h3> What is the problem? </h3>
+            <p>Executing untrusted or manipulated commands, requests or queries by your web application</p>
+          </section>
+          <section>
+            <h3>Risks</h3>
+            <ul>
+              <li class="fragment"> Data loss, corruption, theft </li>
+              <li class="fragment"> Unauthorized access </li>
+              <li class="fragment"> Takeover of system by an attacker </li>
+            </ul>
+          </section>
           <section>
             <h2>LIVE DEMO</h2>
           </section>
         </section>
+
+
         <section data-background-image="lib/repeatable_pattern_background.jpg">
           <section>
-            <h2>What about sessions?</h2>
-
+            <h2>Cross-Site Scripting (XSS)</h2>
+            <img src="lib/img/suspicious.jpg" >
+          </section>
+          <section>
+            <h3> What is the problem? </h3>
+            <p>An attacker can inject untrusted snippets of JavaScript into your application</p>
+          </section>
+          <section>
+            <h3> Types </h3>
+            <ul>
+              <li class="fragment"> Reflected XSS - malicious link </li>
+              <li class="fragment"> Stored XSS - Injected into application server </li>
+            </ul>
+          </section>
+          <section>
+            <h3>Risks</h3>
+            <ul>
+              <li class="fragment"> Account theft </li>
+              <li class="fragment"> Redirect to other malicious site </li>
+              <li class="fragment"> Modification of user data/content </li>
+            </ul>
+          </section>
+          <section>
+            <h2>LIVE DEMO</h2>
           </section>
         </section>
+
+        <section data-background-image="lib/repeatable_pattern_background.jpg">
+          <section>
+            <h2>Cross-Site Request Forgery (CSRF)</h2>
+            <img src="lib/img/csrf.jpg" >
+          </section>
+          <section>
+            <h3> What is the problem? </h3>
+            <p>By single click you may create embarassing social media post or even lose money from your bank account</p>
+
+            <aside class="notes">
+              - klikniecie w spreparowanego linka
+            </aside>
+          </section>
+          <section>
+            <h3>Risks</h3>
+            <ul>
+              <li class="fragment"> Attacker may recreate any traffic he wants </li>
+            </ul>
+          </section>
+          <section>
+            <h2>LIVE DEMO</h2>
+          </section>
+        </section>
+
+
+        <section data-background-image="lib/repeatable_pattern_background.jpg">
+          <section>
+            <h2>Broken Authentication and Session Management</h2>
+          </section>
+          <section>
+            <h3> What is the problem? </h3>
+            <p>Attacker can capture or bypass authentication methods of web applications</p>
+
+            <aside class="notes">
+              - kradziez id sesji z linka
+              - publiczny komputer
+              - haslo nie shashowane
+            </aside>
+          </section>
+          <section>
+            <h3>Types:</h3>
+            <ul>
+              <li class="fragment">Session Management</li>
+              <li class="fragment">Password guessing (brute-force attack)</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Risks</h3>
+            <ul>
+              <li class="fragment"> Attacker may authorize as you to application </li>
+              <li class="fragment"> Attacker may steal your password if not properly encrypted </li>
+            </ul>
+          </section>
+          <section>
+            <h2>NO LIVE DEMO HERE :(</h2>
+            <p> Just remember:</p>
+            <ul>
+              <li class="fragment">Timeout sessions from user</li>
+              <li class="fragment">Don't use the same password everywhere (what if your password gets stolen from server?) </li>
+              <li class="fragment">Always check if this icon is available when you log in<br/><img style="display: block; margin: 0 auto" src="lib/img/ssl-icon.png"></li>
+          </section>
+        </section>
+
+        <section data-background-image="lib/repeatable_pattern_background.jpg">
+          <section>
+            <h2>REDoS</h2>
+          </section>
+
+          <section>
+            <h3> What is the problem? </h3>
+            <p>When untrusted data input is executed on a regex pattern, it may exploit vulnerable patterns into running long calculations to match for a given string.</p>
+          </section>
+
+          <section>
+            <h3> Risks </h3>
+            <ul>
+              <li> Service hanging until matching is completed</li>
+              <li> 100% of CPU consumed </li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>LIVE DEMO</h2>
+          </section>
+        </section>
+
+
       <section data-background-image="lib/repeatable_pattern_background.jpg">
         <section>
           <h2>Some numbers...</h2>
@@ -201,6 +344,7 @@
         <section>
           <h2> Some good read </h2>
           <ul>
+            <li><a href="https://securityintelligence.com/the-10-most-common-application-attacks-in-action/">OWASP TOP TEN</a>
             <li><a href="http://thehackernews.com/">The Hacker News</a></li>
             <li><a href="https://sekurak.pl/">Sekurak</a></li>
             <li><a href="https://niebezpiecznik.pl/">Niebezpiecznik</a></li>
@@ -218,7 +362,7 @@
         </section>
       </section>
       <section data-background-image="lib/repeatable_pattern_background.jpg">
-        <h2>Give us feedback!</h2>
+        <h2>QUIZ TIME</h2>
       </section>
     </div>
     </div>
